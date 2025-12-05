@@ -8,7 +8,7 @@ class Solution {
         Collections.sort(list,Collections.reverseOrder());
 
         int count=0, greater=0;
-        for(int val : list){
+        for(int val:list){
             if(greater>=k) count+=map.get(val);
             greater+=map.get(val);
         }
