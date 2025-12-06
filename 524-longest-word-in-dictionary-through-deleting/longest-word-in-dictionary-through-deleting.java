@@ -2,8 +2,12 @@ class Solution {
     public boolean isSubsequence(String s,String d){
         int i=0,j=0;
         while(i<s.length() && j<d.length()){
-            if(s.charAt(i)==d.charAt(j)) j++;
-            i++;
+            if(s.charAt(i)==d.charAt(j)){
+                i++;
+                j++;
+            }else{
+                i++;
+            }
         }
         return j==d.length();
     }
