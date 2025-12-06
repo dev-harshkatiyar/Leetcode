@@ -11,7 +11,6 @@ class Solution {
         String res="";
         for(String str:dictionary){
              if (isSubsequence(s, str)) {
-
                 if (str.length() > res.length() || 
                    (str.length() == res.length() && str.compareTo(res) < 0)) {
                     res = str;
