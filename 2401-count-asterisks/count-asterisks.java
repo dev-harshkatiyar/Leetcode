@@ -1,11 +1,11 @@
 class Solution {
     public int countAsterisks(String s) {
         int count=0;
-        boolean insidebars=false;
+        int barcount=0;
         for(char ch:s.toCharArray()){
             if(ch=='|'){
-                insidebars=!insidebars;
-            }else if(ch=='*' && !insidebars){
+                barcount++;
+            }else if(ch=='*' && barcount%2==0){
                 count++;
             }
         }
