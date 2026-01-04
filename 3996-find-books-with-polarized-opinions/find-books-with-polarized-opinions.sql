@@ -2,7 +2,7 @@
 select b.book_id,b.title,b.author,b.genre,b.pages,max(rs.session_rating)-min(rs.session_rating) as rating_spread,
 round(sum(case 
 when rs.session_rating>=4 or rs.session_rating<=2 then 1 else 0 
-end)*1.0/count(rs.session_rating),2) as polarization_score
+end)/count(rs.session_rating),2) as polarization_score
 from books as b
 left join reading_sessions as rs
 on b.book_id=rs.book_id
