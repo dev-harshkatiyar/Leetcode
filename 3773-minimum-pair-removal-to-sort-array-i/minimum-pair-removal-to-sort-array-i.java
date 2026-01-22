@@ -1,5 +1,5 @@
 class Solution {
-    public boolean checkorder(List<Integer> list){
+    boolean checkorder(List<Integer> list){
         for(int i=1;i<list.size();i++){
             if(list.get(i)<list.get(i-1)){
                 return false;
