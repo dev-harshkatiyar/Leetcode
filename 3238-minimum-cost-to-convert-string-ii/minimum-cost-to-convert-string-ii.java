@@ -1,7 +1,7 @@
 class Solution {
     static final long INF = Long.MAX_VALUE;
     public long minimumCost(String source, String target,
-                            String[] original, String[] changed, int[] cost) {
+        String[] original, String[] changed, int[] cost) {
 
         Map<String, Integer> id = new HashMap<>();
         Set<Integer> lens = new HashSet<>();
