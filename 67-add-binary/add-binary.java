@@ -5,7 +5,7 @@ class Solution {
         int carry=0;
 
         StringBuilder sb=new StringBuilder();
-        while(m>=0 || n>=0 || carry==1){
+        while(m>=0 || n>=0){
             int sum=carry;
             if(m>=0){
                 sum+=a.charAt(m)-'0';
@@ -17,6 +17,9 @@ class Solution {
             }
             sb.append(sum%2);
             carry=sum/2;
+        }
+        if(carry==1){
+            sb.append('1');
         }
         return sb.reverse().toString();
     }
