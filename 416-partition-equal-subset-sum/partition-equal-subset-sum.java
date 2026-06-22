@@ -1,7 +1,6 @@
 class Solution {
     public static boolean subsetSum(int[] nums,int n,int k){
         boolean[][] dp=new boolean[n][k+1]; 
-
         for(int i=0;i<n;i++){
             dp[i][0]=true;
         }
