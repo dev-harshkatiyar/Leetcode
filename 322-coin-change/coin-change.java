@@ -7,7 +7,7 @@ class Solution {
             if(T%coins[0]==0){
                 dp[0][T]=T/coins[0];
             }else{
-                dp[0][T]=(int)1e9;
+                dp[0][T]=(int)1e5;
             }
         }
         for(int i=1;i<N;i++){
@@ -21,7 +21,7 @@ class Solution {
             }
         }
         int ans=dp[N-1][amount];
-        if(ans>=1e9) return -1;
+        if(ans>=1e5) return -1;
         return ans;
     }
 }
