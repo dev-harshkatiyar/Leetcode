@@ -18,6 +18,9 @@ class Solution {
     public int minDistance(String word1, String word2) {
         int x=word1.length();
         int y=word2.length();
-        return x+y-2*LCS(word1,word2);
+        int deletions=x-LCS(word1,word2);
+        int insertions=y-LCS(word1,word2);
+        return deletions+insertions;
+        //return x+y-2*LCS(word1,word2);
     }
 }
